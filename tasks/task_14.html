@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task_14</title>
+</head>
+<body>
+   <h2>Задача 14</h2>
+   <p> Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач поступово вводить суму грошей до тих пір, поки суми не буде достатньо для оплати товарів (кожного разу користувачу повідомляють, яку ще суму потрібно ввести). </p>
+
+      <script>
+         const maxSum = 100
+         const paymentSum = 1 + Math.floor(Math.random() * maxSum)
+         let paymentUser
+         let totalPayment = 0
+         let residualAmount
+         do {
+            residualAmount = paymentSum - totalPayment
+            paymentUser = parseFloat(prompt(`Вам еще осталось заплатить ${residualAmount} грн. Введите сумму`, ))
+            totalPayment += paymentUser
+         }
+         while (paymentSum > totalPayment)
+         
+
+         document.write (`Вы оплатили всю сумму`)
+
+
+      </script>
+      <br>
+<a href="../index.html">Вернуться</a>
+
+   
+</body>
+</html>

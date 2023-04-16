@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task_15</title>
+</head>
+<body>
+   <h2>Задача 15</h2>
+   <p> Користувач поступово вводить показники температури протягом року. Знайти середню температуру.
+ </p>
+ <script>
+   sumTemper = 0
+   counterTemper = 0
+   for(let i = 1; i <=12; i++, counterTemper++){
+      let userTemper = parseInt(prompt("Введите температуру 12 раз за каждый месяц", " "))
+      if (!isFinite(userTemper)) break
+      sumTemper += userTemper
+   }
+   let averageTemper = sumTemper / counterTemper
+   document.write (`Среднегодовая температура ${(Math.ceil(averageTemper))}`)
+ </script>
+   <br>
+<a href="../index.html">Вернуться</a>
+</body>
+</html>

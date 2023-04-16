@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task_16</title>
+</head>
+<body>
+   <h2>Задача 16</h2>
+   <p> Користувач поступово вводить прибуток магазину за кожен день протягом N тижнів. Знайти загальну величину прибутку та вивести величину прибутку протягом кожного окремого тижня.
+
+ </p>
+
+ <script>
+   const numWeeks = parseInt(prompt("Вводим количество недель"," "))
+   let revenue = 0
+   for (let i=1; i<=numWeeks; i++){
+      let revenueWeek = 0
+      for (let y = 0; y <= 7; y++){
+        let revenueDay = parseInt(prompt(`Прибыль за ${i} день ${revenue} неделю`))
+        if (!isFinite(revenueDay)) break
+        revenueWeek +=revenueDay
+      }
+      revenue +=revenueWeek
+      document.write (`Прибыль ${i} неделю: ${revenue} <br>`)
+   }
+   document.write (`Общая величина прибыли:${revenue}`)
+ </script>
+
+  <br>
+<a href="../index.html">Вернуться</a>
+</body>
+</html>

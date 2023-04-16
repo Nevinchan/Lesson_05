@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task_12</title>
+</head>
+<body>
+   <h2>Задача 12</h2>
+   <p>Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як одне з чотирьох зображень. Вивести ці зображення і повідомити виграш користувача (три перших зображення 100 грн, три других – 200, три третіх – 500, три четвертих зображення – 1000грн). Використати цикли і switch (для вибору зображення за номером).</p>
+   <script>
+      let positionNumber 
+      let randomNumber
+
+      for(let i = 0; i < 3; i++){
+        let randomNumber = Math.floor(Math.random()* 4)+1
+        positionNumber += String(randomNumber)
+         document.write(`<img src="../img/${randomNumber}.png" width="100" alt="#"/>`)
+      }
+      /* =============================================================
+      
+      Выигрыш не выводится. Подскажите пожалуйста где ошибка 
+
+       ================================================================ */
+      let resalt
+      switch(positionNumber){
+         case "111": 
+         resalt = "Выиграли 100 грн"
+         break
+         case "222": 
+         resalt = "Выиграли 200 грн"
+         break
+         case "333": 
+         resalt = "Выиграли 500 грн"
+         break
+         case "444": 
+         resalt = "Выиграли 1000 грн"
+         break
+         default:    
+         resalt = "Проиграли"
+         break
+      }
+      document.write(`<br>${resalt}</br>`)
+
+</script>
+
+
+<br>
+<a href="../index.html">Вернуться</a>
+
+</body>
+</html>

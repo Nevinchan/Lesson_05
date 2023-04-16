@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task_13</title>
+</head>
+<body>
+    <h2>Задача 13</h2>
+
+   <p>Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M. Маючи К снарядів користувач намагається потопити корабель. 
+</p>
+
+<script>
+   const fieldSizeX = parseInt(prompt("Введите размер поля по оси х", " "))
+   const fieldSizeY = parseInt(prompt("Введите размер поля по оси у", " "))
+   let numberofShells = parseInt(prompt("Введите количество снарядов"," "))
+
+   const shipX = 1+Math.floor(Math.random()*fieldSizeX)
+   const shipY = 1+Math.floor(Math.random()*fieldSizeY)
+   let resalt = `Не попали за ${numberofShells} снарядов`
+   let userCoordinateX
+   let userCoordinateY
+
+   
+   for (let i = 1; i <= numberofShells; i++){
+      const userCoordinateX = parseInt (prompt("Введите координаты по оси х"))
+      const userCoordinateY = parseInt (prompt("Введите координаты по оси у"))
+
+      
+      if (userCoordinateX === shipX && userCoordinateY === shipY){
+         resalt = `Вы потопили корабль`
+         break
+      }
+      if (i === numberofShells)
+      document.write(`Вы не потопили корабль`)
+   }
+
+</script>
+   <br>
+<a href="../index.html">Вернуться</a>
+</body>
+</html>
